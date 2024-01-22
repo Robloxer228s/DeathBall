@@ -243,7 +243,7 @@ if rad < 0 then
 rad = - rad
 end
 end
-if pos < rad * 10 then
+if pos < rad * 7.5 then
 CLC() 
 prev = 0
 end
