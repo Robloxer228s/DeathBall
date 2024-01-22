@@ -231,8 +231,10 @@ if mode == -2 then
 CLC()
 wait(0.05)
 for v=1,20 do
+if ball.Highlight.FillColor == RB then
 wait(0.05)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ball.CFrame
+end
 end
 end
 if mode == -1 then
