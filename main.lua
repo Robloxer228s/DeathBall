@@ -229,8 +229,10 @@ end
 pos = pos + Check
 if mode == -2 then
 CLC() 
-wait(0.05) 
+for v=1,20 do
+wait(0.05)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ball.CFrame
+end
 end
 if mode == -1 then
 if prev == 0 then
