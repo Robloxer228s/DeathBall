@@ -4,6 +4,7 @@ local attach = true
 local function CLC()
 game:service("VirtualInputManager"):SendKeyEvent(true, "F", false, game) 
 attach = false
+prev = 0
 end
 
 local mode = 2
@@ -248,9 +249,8 @@ if rad < 0 then
 rad = - rad
 end
 end
-if pos < rad * 7.5 then
+if pos < rad * 3.5 then
 CLC() 
-prev = 0
 end
 end
 if pos < 25 and mode == 1 then
