@@ -1,6 +1,6 @@
 local userInputService = game:GetService("UserInputService")
 local attach = true
-print("Try fix auto 6")
+print("Try fix auto 7")
 
 local function CLC()
 game:service("VirtualInputManager"):SendKeyEvent(true, "F", false, game) 
@@ -240,16 +240,14 @@ end
 end
 end
 if mode == -1 then
-if prev == 0 then
-prev = pos
-else
+if not prev == 0 then
 rad = prev - pos
-prev = pos
+rad = rad * 2.5
 if rad < 0 then
 rad = - rad
 end
 end
-rad = rad * 2.5
+prev = pos
 if pos < rad or pos < 50 then
 print(rad)
 CLC() 
