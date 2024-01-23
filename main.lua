@@ -1,6 +1,6 @@
 local userInputService = game:GetService("UserInputService")
 local attach = true
-print("Try fix auto 7")
+print("Try fix tp to intermission 1")
 
 local function CLC()
 game:service("VirtualInputManager"):SendKeyEvent(true, "F", false, game) 
@@ -212,6 +212,9 @@ while true do
 wait(0.05) 
 local ball = game.Workspace.FX:WaitForChild("Mobile_Default") 
 if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.Visible then
+if _G.debug then
+print(game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text)
+end
 if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text == "INTERMISSION 5" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Lobby.ReadyArea.ReadyZone.CFrame
 end
@@ -254,7 +257,9 @@ end
 end
 prev = pos
 if pos < rad or pos < 50 then
+if _G.debug then
 print(rad)
+end
 CLC() 
 end
 end
