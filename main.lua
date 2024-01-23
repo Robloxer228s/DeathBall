@@ -251,7 +251,7 @@ rad = - rad
 end
 end
 rad = rad / 5
-rad = rad * (rad / 2)
+rad = rad * rad
 if pos < rad then
 print(rad)
 CLC() 
