@@ -211,6 +211,11 @@ local prev  = 0
 while true do
 wait(0.05) 
 local ball = game.Workspace.FX:WaitForChild("Mobile_Default") 
+if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.Visible then
+if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text == "INTERMISSION 5" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Lobby.ReadyArea.ReadyZone.CFrame
+end
+end
 if ball.Highlight.FillColor == RB and attach then
 local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local pos = 0
