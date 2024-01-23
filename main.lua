@@ -1,6 +1,6 @@
 local userInputService = game:GetService("UserInputService")
 local attach = true
-print("Try fix tp to intermission 2")
+--print("Try fix null")
 
 local function CLC()
 game:service("VirtualInputManager"):SendKeyEvent(true, "F", false, game) 
