@@ -3,9 +3,12 @@ local attach = true
 --print("Try fix null")
 
 local function CLC()
+if attach then
 game:service("VirtualInputManager"):SendKeyEvent(true, "F", false, game) 
 attach = false
 prev = 0
+rad = 0
+end
 end
 
 local mode = 2
@@ -222,7 +225,7 @@ end)
 while true do
 wait(0.05) 
 local ball = game.Workspace.FX:WaitForChild("Mobile_Default") 
-if ball.Highlight.FillColor == RB and attach then
+if ball.Highlight.FillColor == RB then
 local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local pos = 0
 local Check = ball.CFrame.X - playerPos.X
@@ -251,14 +254,41 @@ end
 end
 end
 if mode == -1 then
+--if not prev == 0 then
+--rad = prev - pos
+--rad = rad * 2.5
+--if rad < 0 then
+--rad = - rad
+--end
+--end
+--prev = pos
+--if pos < rad or pos < 50 then
+--if _G.debug then
+--print(rad)
+--end
+--CLC() 
+--end
+
+rad = 0
 if not prev == 0 then
-rad = prev - pos
-rad = rad * 2.5
-if rad < 0 then
-rad = - rad
+local check = prev.X - ball.CFrame.X
+if check < 0 then
+check = - check
 end
+rad = rad + check
+check = prev.Y - ball.CFrame.Y
+if check < 0 then
+check = - check
 end
-prev = pos
+rad = rad + check
+check = prev.Z - ball.CFrame.Z
+if check < 0 then
+check = - check
+end
+rad = rad + check
+rad = rad * 3
+end
+prev = ball.CFrame
 if pos < rad or pos < 50 then
 if _G.debug then
 print(rad)
