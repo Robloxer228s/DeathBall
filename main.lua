@@ -214,7 +214,7 @@ if _G.debug then
 print(game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text)
 end
 if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text == "INTERMISSION 5" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Lobby.ReadyArea.ReadyZone.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.["New Lobby"]ReadyArea.ReadyZone.CFrame
 end
 end
 end)
