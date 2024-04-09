@@ -211,12 +211,13 @@ end)
 local rad = 0
 local prev  = 0
 
-game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Changed:Connect(function()
-if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.Visible then
+local InterFrame = game.Players.LocalPlayer.PlayerGui.HUD.HolderBottom.IntermissionFrame
+InterFrame.DescriptionLabel.Changed:Connect(function()
+if InterFrame.Visible and AFK.Value then
 if _G.debug then
 print(game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text)
 end
-if game.Players.LocalPlayer.PlayerGui.UI.HUD.HolderBottom.GeneralNotifications.IntermissionFrame.DescriptionLabel.Text == "INTERMISSION 5" then
+if InterFrame.DescriptionLabel.Text == "INTERMISSION 5" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["New Lobby"].ReadyArea.ReadyZone.CFrame
 end
 end
