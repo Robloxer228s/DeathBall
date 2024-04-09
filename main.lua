@@ -224,7 +224,7 @@ end)
 
 while true do
 wait(0.05) 
-local ball = game.Workspace.FX:WaitForChild("Mobile_Default") 
+local ball = game.Workspace:WaitForChild("Part") --Tested on PC
 if ball.Highlight.FillColor == RB then
 local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local pos = 0
