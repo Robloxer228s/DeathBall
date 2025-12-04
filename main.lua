@@ -1,6 +1,13 @@
---Sorry, updates in TimGui(I/TimGui/Games/5166944221.lua) for start:  loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/TimGUI/main/Main.lua"))()
+--[[Sorry, updates in TimGui(I/TimGui/Games/5166944221.lua) for start:  
+Run this:
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/TimGUI/main/Main.lua"))()
+]]--
 
+if "Sorry, but this don't work now" then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/TimGUI/main/Main.lua"))()
+  return
+end  
 local userInputService = game:GetService("UserInputService")
 local attach = true
 --print("Try fix null")
